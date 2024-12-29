@@ -20,7 +20,7 @@ This project is built using the Laravel framework and focuses on creating a robu
 The use case diagram for this project provides an overview of the system's functionality and interactions between users and the system. This diagram helps visualize the key actions that users can perform.
 
 <p align="center">
-  <img src="./use-case-diagram.png" width="800" alt="Use Case Diagram">
+  <img src="./usecase-diagram.png" width="800" alt="Use Case Diagram">
 </p>
 
 ## Class Diagram
