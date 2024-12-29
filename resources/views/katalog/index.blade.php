@@ -14,28 +14,38 @@
     </style>
 
     <h1 class="text-center mb-4">Katalog Buku Perpustakaan</h1>
-    <div class="row">
-        @foreach($books as $book)
-            <div class="col-md-4 mb-4">
-                <a href="{{ route('peminjaman.create', ['book_id' => $book->id]) }}" 
-                   class="book-link"
-                   data-tersedia="{{ $book->tersedia }}">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $book->judul }}</h5> <!-- Assuming 'judul' for title -->
-                            <p class="card-text">
-                                <strong>Penulis:</strong> {{ $book->penulis }} <br> <!-- Assuming 'penulis' for author -->
-                                <strong>Status:</strong> 
-                                <span class="badge bg-{{ $book->tersedia ? 'success' : 'danger' }}">
-                                    {{ $book->tersedia ? 'Tersedia' : 'Tidak Tersedia' }}
-                                </span>
-                            </p>
+
+    @if($books->isEmpty())
+        <div class="alert alert-warning text-center">
+            <strong>Tidak ada buku di katalog!</strong> Silakan tambahkan buku.
+        </div>
+        <div class="text-center">
+            <a href="{{ route('bukus.create') }}" class="btn btn-primary">Tambah Buku</a>
+        </div>
+    @else
+        <div class="row">
+            @foreach($books as $book)
+                <div class="col-md-4 mb-4">
+                    <a href="{{ route('peminjaman.create', ['book_id' => $book->id]) }}" 
+                       class="book-link"
+                       data-tersedia="{{ $book->tersedia }}">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $book->judul }}</h5> <!-- Assuming 'judul' for title -->
+                                <p class="card-text">
+                                    <strong>Penulis:</strong> {{ $book->penulis }} <br> <!-- Assuming 'penulis' for author -->
+                                    <strong>Status:</strong> 
+                                    <span class="badge bg-{{ $book->tersedia ? 'success' : 'danger' }}">
+                                        {{ $book->tersedia ? 'Tersedia' : 'Tidak Tersedia' }}
+                                    </span>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-        @endforeach
-    </div>
+                    </a>
+                </div>
+            @endforeach
+        </div>
+    @endif
 
     <script>
         // JavaScript to handle click event and show alert if the book is not available
