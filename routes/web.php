@@ -7,9 +7,7 @@ use App\Http\Controllers\BukuController;
 use App\Http\Controllers\PeminjamanController;
 
 // Homepage route
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [KatalogController::class, 'index'])->name('katalog.index');
 
 // Resource routes for Katalog and Peminjaman
 Route::resource('katalog', KatalogController::class);
