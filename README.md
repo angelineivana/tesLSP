@@ -15,13 +15,17 @@ This project is built using the Laravel framework and focuses on creating a robu
 - Comprehensive testing setup for quality assurance.
 - Detailed documentation for easy onboarding and usage.
 
+## Use Case Diagram
+
+The use case diagram for this project provides an overview of the system's functionality and interactions between users and the system. This diagram helps visualize the key actions that users can perform.
+
+<p align="center">
+  <img src="./use-case-diagram.png" width="800" alt="Use Case Diagram">
+</p>
+
 ## Class Diagram
 
-The class diagram for this project is available in the main folder. You can view it by clicking the link below:
-
-[Class Diagram (PDF)](./class-diagram.pdf)
-
-Alternatively, you can view the diagram as an image:
+The class diagram for this project is available in the main folder. You can view the diagram as an image:
 
 <p align="center">
   <img src="./class-diagram.png" width="800" alt="Class Diagram">

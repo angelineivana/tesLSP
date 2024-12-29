@@ -15,6 +15,21 @@
 
     <h1 class="text-center mb-4">Katalog Buku Perpustakaan</h1>
 
+    <!-- Search and Filter Form -->
+    <form method="GET" action="{{ route('katalog.index') }}" class="mb-4">
+        <div class="row">
+            <div class="col-md-4">
+                <input type="text" name="judul" class="form-control" placeholder="Cari judul buku..." value="{{ request('judul') }}">
+            </div>
+            <div class="col-md-4">
+                <input type="text" name="penulis" class="form-control" placeholder="Cari penulis..." value="{{ request('penulis') }}">
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-primary w-100">Cari</button>
+            </div>
+        </div>
+    </form>
+
     @if($books->isEmpty())
         <div class="alert alert-warning text-center">
             <strong>Tidak ada buku di katalog!</strong> Silakan tambahkan buku.
@@ -44,6 +59,25 @@
                     </a>
                 </div>
             @endforeach
+        </div>
+
+        <!-- Pagination Links - Only Previous and Next -->
+        <div class="d-flex justify-content-center">
+            <div class="pagination">
+                <!-- Previous Button -->
+                @if ($books->onFirstPage())
+                    <span class="page-link disabled">Previous</span>
+                @else
+                    <a href="{{ $books->previousPageUrl() }}" class="page-link">Previous</a>
+                @endif
+
+                <!-- Next Button -->
+                @if ($books->hasMorePages())
+                    <a href="{{ $books->nextPageUrl() }}" class="page-link">Next</a>
+                @else
+                    <span class="page-link disabled">Next</span>
+                @endif
+            </div>
         </div>
     @endif
 
