@@ -15,6 +15,18 @@ This project is built using the Laravel framework and focuses on creating a robu
 - Comprehensive testing setup for quality assurance.
 - Detailed documentation for easy onboarding and usage.
 
+## Class Diagram
+
+The class diagram for this project is available in the main folder. You can view it by clicking the link below:
+
+[Class Diagram (PDF)](./class-diagram.pdf)
+
+Alternatively, you can view the diagram as an image:
+
+<p align="center">
+  <img src="./class-diagram.png" width="800" alt="Class Diagram">
+</p>
+
 ### Unit Testing
 
 To ensure the reliability of the application, extensive unit testing has been implemented. The unit tests verify the correctness of individual components and cover a variety of scenarios.
