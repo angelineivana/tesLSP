@@ -23,7 +23,7 @@ class PeminjamanDataSeeder extends Seeder
             // Create loans with specific book IDs: 17, 20, 22, 25
             Peminjaman::create([
                 'anggota_id' => $anggota->random()->id, // Random member
-                'buku_id' => 27,  // Specific book ID
+                'buku_id' => 2,  // Specific book ID
                 'tanggal_pinjam' => $tanggalPinjam,
                 'tanggal_harus_kembali' => $tanggalPinjam->copy()->addDays(7), // Due 7 days from the borrow date
                 'tanggal_kembali' => null, // Not yet returned
@@ -31,7 +31,7 @@ class PeminjamanDataSeeder extends Seeder
 
             Peminjaman::create([
                 'anggota_id' => $anggota->random()->id, // Random member
-                'buku_id' => 30,  // Specific book ID
+                'buku_id' => 5,  // Specific book ID
                 'tanggal_pinjam' => now(),
                 'tanggal_harus_kembali' => now()->addDays(7),
                 'tanggal_kembali' => null, // Not yet returned
@@ -39,7 +39,7 @@ class PeminjamanDataSeeder extends Seeder
 
             Peminjaman::create([
                 'anggota_id' => $anggota->random()->id, // Random member
-                'buku_id' => 32,  // Specific book ID
+                'buku_id' => 7,  // Specific book ID
                 'tanggal_pinjam' => $tanggalPinjam,
                 'tanggal_harus_kembali' => $tanggalPinjam->copy()->addDays(7),
                 'tanggal_kembali' => null, // Not yet returned
@@ -47,7 +47,7 @@ class PeminjamanDataSeeder extends Seeder
 
             Peminjaman::create([
                 'anggota_id' => $anggota->random()->id, // Random member
-                'buku_id' => 35,  // Specific book ID
+                'buku_id' => 10,  // Specific book ID
                 'tanggal_pinjam' => now(),
                 'tanggal_harus_kembali' => now()->addDays(7),
                 'tanggal_kembali' => null, // Not yet returned
