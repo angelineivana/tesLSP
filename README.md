@@ -39,7 +39,7 @@ To ensure the reliability of the application, extensive unit testing has been im
 
 - **Test Code Location:** All feature test cases are located in `tests/feature`.
 - **Unit Test Results:** After running the tests, results are stored in the file `tests/unittest-result.xml`.
-- **Testing Scenarios:** A detailed testing scenario description can be found in `tests/testing-scenario.md`.
+- **Testing Scenarios:** A detailed testing scenario description can be found in `tests/user-testing-scenario-table.md` or [User Testing Scenario.pdf](./tests/User%20Testing%20Scenario.pdf).
 
 ### Running Tests
 
