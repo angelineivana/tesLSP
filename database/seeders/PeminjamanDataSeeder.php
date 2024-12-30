@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Peminjaman;
 use App\Models\Anggota;
@@ -29,9 +30,6 @@ class PeminjamanDataSeeder extends Seeder
                     'tanggal_harus_kembali' => $tanggalPinjam->copy()->addDays(7),
                     'tanggal_kembali' => null,
                 ]);
-
-                // Optionally update the book back to available (if required)
-                // $book->update(['tersedia' => 1]);
             }
         }
     }
